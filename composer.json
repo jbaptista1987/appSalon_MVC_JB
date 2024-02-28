@@ -1,0 +1,26 @@
+{
+    "name": "jesusbaptista/appsalonmvc",
+    "description": "Proyecto con PHP 8 MVC, JS, CSS, SASS, GULP, Composer, MySQL",
+    "type": "project",
+    "autoload": {
+        "psr-4": {
+            "Jesusbaptista\\Appsalonmvc\\": "src/",
+            "MVC\\" : "./",
+            "Controllers\\" : "./controllers",
+            "Model\\" : "./models",
+            "AppSalon\\" : "./includes",
+            "Classes\\" : "./classes"
+        }
+    },
+    "authors": [
+        {
+            "name": "Jesus Baptista",
+            "email": "ing.jb87@gmail.com"
+        }
+    ],
+    "require": {
+        "google/recaptcha": "^1.3",
+        "resend/resend-php": "^0.11.0",
+        "vlucas/phpdotenv": "^5.6"
+    }
+}

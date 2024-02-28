@@ -1,0 +1,28 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.swalModal{
+    display: grid;
+    grid-template-columns: 30% 70%;
+    background: linear-gradient(
+        to bottom,
+        V.$negro,
+        lighten(V.$negro, 25%) 25%,
+        V.$negro
+      );
+    color: V.$blanco;
+    padding: 0.5rem;
+    justify-items: end;
+
+    div:nth-child(3) {
+      justify-self: start;
+    }
+}
+.swal-container-large-font .swal2-html-container {
+    font-size: 1.8rem;
+}
+
+.swalmodalerror{
+  @extend .swalModal;
+  display: flex;
+}

@@ -1,0 +1,74 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.citasAdmin{
+    list-style: none;
+    padding: 0;
+    border-top: 2px solid V.$blanco;
+    li{
+        padding: 1rem;
+        
+        p{
+            font-weight: V.$bold;
+            color: V.$azul;
+            
+        }
+
+        span, .servicio{
+            font-weight: V.$regular;
+            color: V.$blanco;
+            margin: 0;
+        }
+    }
+    p{
+        font-weight: V.$bold;
+        color: V.$azul;
+        margin-left: 1.1rem;
+    }
+    span, .servicio{
+        font-weight: V.$regular;
+        color: V.$blanco;
+        margin: 0;
+    }
+}
+#frmEliminarCita{
+    border-bottom: 2px solid V.$blanco;
+}
+.boton-eliminar{
+    @include M.boton(V.$rojo, V.$blanco);
+    margin: 0 0 1.1rem 1.1rem;
+}
+
+.mobile-menu{
+    /*@include tablet {
+        display: none;
+    }*/
+
+    img {
+        width: 4rem;
+        cursor: pointer;
+    }
+}
+
+.navegacion {
+    display: none;
+    flex-direction: column;
+
+    overflow: hidden;;
+    opacity: 0;
+    transition: all 3s ease-in-out, opacity 0.5s linear;
+
+    a{
+        color: V.$blanco;
+        border: 1px solid V.$blanco;
+        width: 40%;
+        margin: 0.5rem 0 0.5rem 0;
+        border-radius: 0.9rem;
+        padding: 1rem;
+        background-color: V.$azul;
+    }
+}
+.mostrar_Menu {
+    display: flex;
+    opacity: 1;
+}

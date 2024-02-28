@@ -1,0 +1,55 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+#nombre{
+    background-color: lighten($color: V.$negro, $amount: 40%);
+    color: V.$blanco;
+    cursor: not-allowed;
+}
+
+.seccion{
+    display: none;
+
+    .text-center{
+        text-align: center;
+    }
+}
+
+.mostrar {
+    display: block;
+}
+.ocultar {
+    display: none;
+}
+
+.barraLog{
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+}
+#identUsuarioPanel{
+    p{
+        margin: 0;
+    }
+}
+
+.cerrar-sesion-btn {
+    background-color: V.$azul;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-bottom: 1rem;
+  }
+  
+  .cerrar-sesion-btn:hover {
+    background-color: darken(V.$azul, 10%);
+  }
+  
+  .cerrar-sesion-btn:active {
+    background-color: #d32f2f;
+  }

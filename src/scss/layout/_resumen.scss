@@ -1,0 +1,50 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.contenido-resumen{
+
+    p{
+        margin-bottom: 1rem;
+        margin-left: 1.6rem;
+
+        &:nth-child(2),
+        &:nth-child(3),
+        &:nth-child(6){
+            margin-top: 1rem;
+        }
+    }
+    span{
+        color: V.$azul;
+        font-weight: V.$bold;
+        font-size: 2.4rem;
+    }
+}
+.contenedor-tabla-serviciosSel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.servicios-seleccionados{
+    border-collapse: inherit; 
+    margin: 2rem 0; 
+    font-family: V.$fuente_principal; 
+    //min-width: 45rem;
+    width: 95%; 
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15); 
+    
+    thead tr { 
+        background-color: lighten(V.$azul, 10%); 
+        color: V.$blanco; 
+        text-align: middle; 
+        font-size: 1.6rem; 
+    }
+
+    th,td {
+        padding: 1.6rem; 
+        border: 1px solid white;
+    }
+
+    tbody tr { 
+        border: 1.5px solid #dddddd; 
+    } 
+}

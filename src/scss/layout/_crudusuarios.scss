@@ -1,0 +1,53 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+@use 'componentes/botones' as B;
+
+.contenedor-tabla-usuariosSel{
+   /* display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;*/
+    display: block;
+}
+.usuarios-seleccionados{
+    border-collapse: inherit; 
+    margin: 2rem 0; 
+    font-family: V.$fuente_principal; 
+    width: 100%; 
+    box-shadow: 0 0 2rem rgba(0, 0, 0, 0.15); 
+    
+    thead tr  { 
+        background-color: lighten(V.$azul, 10%); 
+        color: V.$blanco; 
+        text-align: middle; 
+        font-size: 1.5rem 
+    }
+    .linkUsuario{
+        color: yellowgreen; 
+        text-align: middle; 
+        font-size: 1.5rem;
+        text-decoration: underline;
+    }
+
+    tbody tr { 
+        border: 1.5px solid V.$blanco; 
+    } 
+}
+
+.usuarios-seleccionados th,
+.usuarios-seleccionados td {
+    padding: 1.2rem;
+    border: 1px solid V.$blanco;
+}
+#pruebasID{
+    @extend .boton;
+    margin: 0.5rem 0.5rem 0.5rem 0;
+}
+.botoneracrudusuarios{
+    display: flex;
+}
+
+#imagePreview{
+    margin-left: 11rem;
+    width: 16rem;
+}

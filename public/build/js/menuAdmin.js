@@ -1,0 +1,1 @@
+function clickMenuAdmin(){document.querySelector(".mobile-menu").addEventListener("click",despliegueMenu)}function despliegueMenu(){document.querySelector(".navegacion").classList.toggle("mostrar_Menu")}document.addEventListener("DOMContentLoaded",(function(){clickMenuAdmin()}));

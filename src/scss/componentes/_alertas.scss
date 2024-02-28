@@ -1,0 +1,16 @@
+@use 'base/variables' as V;
+@use 'base/mixins' as M;
+
+.errorLlenado{
+    color: V.$blanco;
+    width: auto;
+    text-align: center;
+    margin: 1rem 0;
+
+    &.error{
+        background-color: V.$rojo;
+    }
+    &.msjExito{
+        background-color: V.$verde;
+    }
+}
