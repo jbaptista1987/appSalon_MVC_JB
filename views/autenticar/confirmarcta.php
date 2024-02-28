@@ -11,13 +11,13 @@
         <p>Sera Redigiridigo en: </p>
         <div id="countdown">10</div>
 
-        <img src="/AppSalon_MVC/public/build/img/loadingapp.gif" alt="Icono Loading" loading="lazy">
+        <img src="/build/img/loadingapp.gif" alt="Icono Loading" loading="lazy">
     </div>
 </div>
 
 
 <?php
     $scriptJS = "
-        <script src='/appsalon_mvc/public/build/js/app.js'></script>  
+        <script src='build/js/app.js'></script>  
     ";
 ?>

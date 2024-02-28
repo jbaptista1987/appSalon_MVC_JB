@@ -18,7 +18,7 @@ class loginControllers {
             //$ip = $_SERVER['REMOTE_ADDR'];
             $captcha = $_POST["g-recaptcha-response"];
             $secretkey ='6LdWX2gpAAAAAGyFZqZkEgploynhwn3YwjHWieYE';
-            $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=127.0.0.1");
+            $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=" . $_SERVER['REMOTE_ADDR']);
             $atributos = json_decode($respuestaCaptcha, true);
             
             //Llenar el Objeto de Login con los datos de Usuario, Clave y Captcha Validado
@@ -49,13 +49,13 @@ class loginControllers {
 
                         switch ($LoginApp->Tipo_Usuario) {
                             case 1:
-                                header('Location: /appsalon_mvc/public/index.php/citasIndex');
+                                header('Location: /citasIndex');
                                 break;
                             case 2:
-                                header('Location: /appsalon_mvc/public/index.php/citasIndex');
+                                header('Location: /citasIndex');
                                 break;
                             case 3:
-                                header('Location: /appsalon_mvc/public/index.php/paneladmin');
+                                header('Location: /paneladmin');
                                 break;
                         }
                         //Se que lo idea es un IF ELSE pero lo hago asi por tema de futuro crecimiento
@@ -82,7 +82,7 @@ class loginControllers {
 
     public static function logout(){
         $_SESSION = [];
-        header('Location: /appsalon_mvc/public/index.php');
+        header('Location: /');
 
     }
 
@@ -134,7 +134,7 @@ class loginControllers {
          if( !empty($valTokenUser) ){
              $ObjLogin->setCampoObjeto($valTokenUser->ID,'ID');
          }else{
-            header('Location:/appsalon_mvc/public/index.php');
+            header('Location: /index.php');
          }
 
         if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
@@ -183,7 +183,7 @@ class loginControllers {
                         if ($resultado['resultado']) {
                             //$idInsertado = $resultado['ID'];
                             enviarTokenEmailResend($ObjLogin->Nombre . " " . $ObjLogin->Apellido . " (" . $ObjLogin->Usuario . ")", $ObjLogin->Token, $ObjLogin->Usuario, $ObjLogin->Correo);
-                            echo "<script>alert('Registro de Usuario Exitoso');parent.location ='/appsalon_mvc/public/index.php'</script>";
+                            echo "<script>alert('Registro de Usuario Exitoso');parent.location ='/'</script>";
                         }
                     }
                 }
@@ -218,10 +218,10 @@ class loginControllers {
                 ]);
             }
             else{
-                header('Location: /appsalon_mvc/public/index.php');
+                header('Location: /');
             }
         }else{
-            header('Location: /appsalon_mvc/public/index.php');
+            header('Location: /');
         }
     }
 

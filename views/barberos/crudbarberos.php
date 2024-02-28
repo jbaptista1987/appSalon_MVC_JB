@@ -75,7 +75,7 @@
 <?php
     $scriptJS = "
         <script src='https://cdn.jsdelivr.net/npm/sweetalert2@11'></script>
-        <script src='/appsalon_mvc/public/build/js/funciones.js'></script> 
-        <script src='/appsalon_mvc/public/build/js/crudBarberos.js'></script> 
+        <script src='/build/js/funciones.js'></script> 
+        <script src='/build/js/crudBarberos.js'></script> 
     ";
 ?>

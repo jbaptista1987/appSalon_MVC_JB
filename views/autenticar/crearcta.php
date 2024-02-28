@@ -58,13 +58,13 @@
 </form>
 
 <div class="acciones">
-    <a href="/appsalon_mvc/public/index.php">Inicio de Sesion</a>
-    <a href="/appsalon_mvc/public/index.php/olvidarpass">¿Olvidaste tus Datos de Acceso?</a>
+    <a href="/">Inicio de Sesion</a>
+    <a href="/olvidarpass">¿Olvidaste tus Datos de Acceso?</a>
 </div>
 
 
 <?php
     $scriptJS = "
-        <script src='/appsalon_mvc/public/build/js/app.js'></script>  
+        <script src='/build/js/app.js'></script>  
     ";
 ?>

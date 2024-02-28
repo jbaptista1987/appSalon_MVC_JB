@@ -27,7 +27,7 @@
 </form>
 
 <div class="acciones">
-    <a href="/appsalon_mvc/public/index.php/crearcta">Registrarse AQUI...</a>
-    <a href="/appsalon_mvc/public/index.php/olvidarpass">¿Olvidaste tus Datos de Acceso?</a>
+    <a href="/index.php/crearcta">Registrarse AQUI...</a>
+    <a href="/index.php/olvidarpass">¿Olvidaste tus Datos de Acceso?</a>
 </div>
 
