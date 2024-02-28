@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function(){
 
   if(document.querySelector('#countdown')) {
     const countdownEl = document.getElementById('countdown');
-    const targetURL = '/appsalon_mvc/public/index.php';
+    const targetURL = '/';
     const intervalId = setInterval(() => {
         const currentCount = parseInt(countdownEl.textContent);
         if (currentCount <= 1) {
