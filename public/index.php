@@ -15,8 +15,8 @@ $router = new Router();
 
 //------------********************MANEJO DE SESION****************---------------------------------//
 //Iniciar y Cerrar Sesion
-$router->get('/appsalon_mvc/public/index.php', [loginControllers::class, 'login']);
-$router->post('/appsalon_mvc/public/index.php', [loginControllers::class, 'login']);
+$router->get('/', [loginControllers::class, 'login']);
+$router->post('/', [loginControllers::class, 'login']);
 $router->get('/appsalon_mvc/public/index.php/logout', [loginControllers::class, 'logout']);
 
 //Recuperar Password
