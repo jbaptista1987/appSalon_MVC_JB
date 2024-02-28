@@ -18,5 +18,5 @@
 
 <div class="acciones">
     <a href="/">Inicio de Sesion</a>
-    <a href="/index.php/crearcta">Registrate Aqui...</a>
+    <a href="/crearcta">Registrate Aqui...</a>
 </div>
