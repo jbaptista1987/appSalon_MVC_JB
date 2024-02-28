@@ -20,52 +20,50 @@ $router->post('/', [loginControllers::class, 'login']);
 $router->get('/appsalon_mvc/public/index.php/logout', [loginControllers::class, 'logout']);
 
 //Recuperar Password
-$router->get('/appsalon_mvc/public/index.php/olvidarpass', [loginControllers::class, 'olvidarpass']);
-$router->post('/appsalon_mvc/public/index.php/olvidarpass', [loginControllers::class, 'olvidarpass']);
-$router->get('/appsalon_mvc/public/index.php/recuperarpass', [loginControllers::class, 'recuperarpass']);
-$router->post('/appsalon_mvc/public/index.php/recuperarpass', [loginControllers::class, 'recuperarpass']);
+$router->get('/olvidarpass', [loginControllers::class, 'olvidarpass']);
+$router->post('/olvidarpass', [loginControllers::class, 'olvidarpass']);
+$router->get('/recuperarpass', [loginControllers::class, 'recuperarpass']);
+$router->post('/recuperarpass', [loginControllers::class, 'recuperarpass']);
 
 //Crear Cuenta
-$router->get('/appsalon_mvc/public/index.php/crearcta', [loginControllers::class, 'crearcta']);
-$router->post('/appsalon_mvc/public/index.php/crearcta', [loginControllers::class, 'crearcta']);
+$router->get('/crearcta', [loginControllers::class, 'crearcta']);
+$router->post('/crearcta', [loginControllers::class, 'crearcta']);
 
 //Confirmar Cuenta
-$router->get('/appsalon_mvc/public/index.php/confirmarcta', [loginControllers::class, 'confirmarcta']);
+$router->get('/confirmarcta', [loginControllers::class, 'confirmarcta']);
 
 //CRUD Usuarios
-$router->get('/appsalon_mvc/public/index.php/crudusuarios', [loginControllers::class, 'crudusuarios']);
-$router->post('/appsalon_mvc/public/index.php/crudusuarios', [loginControllers::class, 'crudusuarios']);
+$router->get('/crudusuarios', [loginControllers::class, 'crudusuarios']);
+$router->post('/crudusuarios', [loginControllers::class, 'crudusuarios']);
 
 //------------********************MANEJO DE CITAS****************---------------------------------//
 
 // Seccion Privada (Solo iniciando Sesion y Teniendo privilegios)
-$router->get('/appsalon_mvc/public/index.php/citasIndex',[CitasControllers::class, 'citasIndex']);
+$router->get('/citasIndex',[CitasControllers::class, 'citasIndex']);
 
 //API de Citas
-$router->get('/appsalon_mvc/public/index.php/api/servicios',[APIControllers::class, 'index']);
-$router->post('/appsalon_mvc/public/index.php/api/citas',[APIControllers::class, 'guardarCita']);
-$router->post('/appsalon_mvc/public/index.php/api/eliminarCita',[APIControllers::class, 'eliminarCita']);
+$router->get('/api/servicios',[APIControllers::class, 'index']);
+$router->post('/api/citas',[APIControllers::class, 'guardarCita']);
+$router->post('/api/eliminarCita',[APIControllers::class, 'eliminarCita']);
 
 //Listar los barberos disponibles para las citas
-$router->get('/appsalon_mvc/public/index.php/api/barberos',[APIControllers::class, 'barberos']);
-$router->post('/appsalon_mvc/public/index.php/api/barberos',[APIControllers::class, 'barberos']);
+$router->get('/api/barberos',[APIControllers::class, 'barberos']);
+$router->post('/api/barberos',[APIControllers::class, 'barberos']);
 
 //Ingreso por usuario administrador
-$router->get('/appsalon_mvc/public/index.php/paneladmin',[AdminControllers::class, 'panelAdmin']);
-$router->get('/appsalon_mvc/public/index.php/admin',[AdminControllers::class, 'citasAdmin']);
+$router->get('/paneladmin',[AdminControllers::class, 'panelAdmin']);
+$router->get('/admin',[AdminControllers::class, 'citasAdmin']);
 
 //-------------*********************MANEJO DE SERVICIOS****************-----------------------------//
 //CRUD SERVICIOS
-$router->get('/appsalon_mvc/public/index.php/crudservicios', [ServiciosControllers::class, 'crudservicios']);
-$router->post('/appsalon_mvc/public/index.php/crudservicios', [ServiciosControllers::class, 'crudservicios']);
+$router->get('/crudservicios', [ServiciosControllers::class, 'crudservicios']);
+$router->post('/crudservicios', [ServiciosControllers::class, 'crudservicios']);
 
 
 //-------------*********************MANEJO DE BARBEROS****************-----------------------------//
 //CRUD BARBEROS
-$router->get('/appsalon_mvc/public/index.php/crudbarberos', [BarberosControllers::class, 'crudbarberos']);
-$router->post('/appsalon_mvc/public/index.php/crudbarberos', [BarberosControllers::class, 'crudbarberos']);
+$router->get('/crudbarberos', [BarberosControllers::class, 'crudbarberos']);
+$router->post('/crudbarberos', [BarberosControllers::class, 'crudbarberos']);
 
 
-//Prueba de Horario
-$router->get('/appsalon_mvc/views/horarios.php',[APIControllers::class, 'barberos']);
 $router->comprobarRutas();
