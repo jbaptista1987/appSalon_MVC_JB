@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>App Salón</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;700;900&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="/appsalon_mvc/public/build/css/app.css">
+    <link rel="stylesheet" href="/build/css/app.css">
 
     <!-- Para el Recaptcha de Google -->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
@@ -53,7 +53,7 @@
 
         if( isset( $_SESSION["Tipo_Usuario"] ) && $_SESSION["Tipo_Usuario"] == "3"   ) {
     ?>
-        <script src='/appsalon_mvc/public/build/js/menuAdmin.js'></script> 
+        <script src='/build/js/menuAdmin.js'></script> 
     <?php } ?>
 
 
