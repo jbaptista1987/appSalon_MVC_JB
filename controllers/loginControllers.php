@@ -19,7 +19,8 @@ class loginControllers {
             
             $captcha = $_POST["g-recaptcha-response"];
             $secretkey = $_ENV['GOOGLE_RECAPTCHA_KEY_BACK'];
-            $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=localhost");
+            $remoteip = $_SERVER['REMOTE_ADDR'];
+            $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$remoteip");
             $atributos = json_decode($respuestaCaptcha, true);
             //Llenar el Objeto de Login con los datos de Usuario, Clave y Captcha Validado
             $ObjLogin->sincronizar($_POST);
