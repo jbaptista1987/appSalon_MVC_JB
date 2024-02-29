@@ -42,7 +42,7 @@ async function delServiciosSel(){
         datos.append('IDs', usuarioIDsString);
         datos.append('accion', 'eliminar');
         
-        const URL = '/appsalon_mvc/public/index.php/crudservicios';
+        const URL = '/crudservicios';
         const respuesta = await fetch(URL, {
           method: 'POST',
           body: datos
@@ -107,7 +107,7 @@ async function registrarServicioCRUD(){
         datos.append('Tiempo', Tiempo);
         datos.append('accion', 'crear');
 
-        const URL = '/appsalon_mvc/public/index.php/crudservicios';
+        const URL = '/crudservicios';
         const respuesta = await fetch(URL, {
           method: 'POST',
           body: datos

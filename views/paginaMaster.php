@@ -26,15 +26,15 @@
             ?>
             <div class="barra">
                 <div class="mobile-menu">
-                    <img src="/appsalon_mvc/public/build/img/barras.svg" alt="Icono de Menu">
+                    <img src="/build/img/barras.svg" alt="Icono de Menu">
                 </div>
 
                 <nav class="navegacion">
-                        <a href="/appsalon_mvc/public/index.php/admin">Consultar Citas</a>
-                        <a href="/appsalon_mvc/public/index.php/citasIndex">Crear Cita</a>
-                        <a href="/appsalon_mvc/public/index.php/crudusuarios">CRUD Usuarios</a>
-                        <a href="/appsalon_mvc/public/index.php/crudservicios">CRUD Servicios</a>
-                        <a href="/appsalon_mvc/public/index.php/crudbarberos">CRUD Barberos</a>
+                        <a href="/admin">Consultar Citas</a>
+                        <a href="/citasIndex">Crear Cita</a>
+                        <a href="/crudusuarios">CRUD Usuarios</a>
+                        <a href="/crudservicios">CRUD Servicios</a>
+                        <a href="/crudbarberos">CRUD Barberos</a>
                 </nav>
             </div> 
             <?php    

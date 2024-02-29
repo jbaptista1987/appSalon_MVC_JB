@@ -92,7 +92,7 @@ async function delUsuariosSel(){
         datos.append('estatus', nuevoEstatus);
         datos.append('accion', 'modificar');
         
-        const URL = '/appsalon_mvc/public/index.php/crudusuarios';
+        const URL = '/crudusuarios';
         const respuesta = await fetch(URL, {
           method: 'POST',
           body: datos
@@ -291,7 +291,7 @@ async function registrarUsuarioCRUD(){
     datos.append('Estatus', Estatus);
     datos.append('accion', 'crear');
     
-    const URL = '/appsalon_mvc/public/index.php/crudusuarios';
+    const URL = '/crudusuarios';
     const respuesta = await fetch(URL, {
       method: 'POST',
       body: datos

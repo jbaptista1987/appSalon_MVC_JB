@@ -50,7 +50,7 @@
                     if(esUltimo($actual, $proximo)) {
                 ?>
                     <p class="totalPagar">Total a Pagar: <span><?php echo $totalPagar; ?></span></p>
-                        <form id="frmEliminarCita" action="/appsalon_mvc/public/index.php/api/eliminarCita" method="POST">
+                        <form id="frmEliminarCita" action="api/eliminarCita" method="POST">
                             <input type="hidden" name="ID" value="<?php echo $CitaServ->ID; ?>">
                             <input type="submit" id="btnEliminarCita" class="boton-eliminar" value="Cancelar Cita">
                         </form>

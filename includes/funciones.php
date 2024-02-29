@@ -187,7 +187,7 @@ function enviarTokenEmailResend( $NombreApellidoUser, $Token, $Usuario, $Correo)
         $contenido = "<html>";
         $contenido .= "<p>Buen dia <strong>" . $NombreApellidoUser . "</strong> - Tienes un nuevo Mensaje desde Registro de Usuario...</p>";
         $contenido .= "<p>Confirma tu Registro en el siguiente enlace: </p>";
-        $contenido .= "<p> <a href='" . $_ENV['PROJECT_URL'] . "/appsalon_mvc/public/index.php/confirmarcta?Token=" . $Token . "&Usuario=" . $Usuario ."'>AQUI...</a></p>";
+        $contenido .= "<p> <a href='" . $_ENV['PROJECT_URL'] . "/confirmarcta?Token=" . $Token . "&Usuario=" . $Usuario ."'>AQUI...</a></p>";
         $contenido .= "<p>Si tu no solicitaste esta cuenta, puedes ignorar el mensaje<p>";
         $contenido .= '</html>';
         $result = $resend->emails->send([
@@ -210,7 +210,7 @@ function tokenRecPassResend( $NombreApellidoUser, $Token, $Usuario, $Correo) {
         $contenido  = "<html>";
         $contenido .= "<p>Buen dia <strong>" . $NombreApellidoUser . "</strong> - Tienes un nuevo Mensaje desde Recuperar Clave...</p>";
         $contenido .= "<p>Confirma tu Cambio de Clave en el siguiente enlace: </p>";
-        $contenido .= "<p> <a href='" . $_ENV['PROJECT_URL'] . "/appsalon_mvc/public/index.php/recuperarpass?Token=" . $Token . "&Usuario=" . $Usuario ."'>AQUI...</a></p>";
+        $contenido .= "<p> <a href='" . $_ENV['PROJECT_URL'] . "/recuperarpass?Token=" . $Token . "&Usuario=" . $Usuario ."'>AQUI...</a></p>";
         $contenido .= "<p>Si tu no solicitaste este cambio, puedes ignorar el mensaje o Notificar al Administrador de Sistemas<p>";
         $contenido .= "</html>";
         //ProbarVariable($contenido);

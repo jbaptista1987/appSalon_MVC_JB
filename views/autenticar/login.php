@@ -2,7 +2,7 @@
 <h1 class="nombre-pagina">Inicio de Sesion</h1>
 <p class="descripcion-pagina">Ingrese los datos asociados a su cuenta</p>
 
-<form id=formLogin action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="formulario" method="post">
+<form id=formLogin class="formulario" method="post">
     <div class="campo">
         <label for="usuario">Usuario:</label>
         <input type="text" name="Usuario" id="usuario" placeholder="Nombre de Usuario" require>

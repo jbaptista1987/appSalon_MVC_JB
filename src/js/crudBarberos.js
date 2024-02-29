@@ -40,7 +40,7 @@ async function delBarberoSel(){
         datos.append('IDs', usuarioIDsString);
         datos.append('accion', 'eliminar');
         
-        const URL = '/appsalon_mvc/public/index.php/crudbarberos';
+        const URL = '/crudbarberos';
         const respuesta = await fetch(URL, {
           method: 'POST',
           body: datos
@@ -100,7 +100,7 @@ async function registrarBarberosCRUD(){
         datos.append('sede', sede);
         datos.append('accion', 'crear');
 
-        const URL = '/appsalon_mvc/public/index.php/crudbarberos';
+        const URL = '/crudbarberos';
         const respuesta = await fetch(URL, {
           method: 'POST',
           body: datos

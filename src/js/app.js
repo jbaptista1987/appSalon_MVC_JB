@@ -153,7 +153,7 @@ function paginaSiguiente(){
 //Se usa async para que sea asincrona - No sabemos cuanto demorara y puede afectar la carga de ptras funciones
 async function consultarAPI() {
     try {
-      const URL = '/appsalon_mvc/public/index.php/api/servicios';
+      const URL = '/api/servicios';
       const resultado = await fetch(URL);
       const servicios = await resultado.json();
       mostrarServicios(servicios);
@@ -439,7 +439,7 @@ async function generarCita(){
 
   try {
     //Peticion haciala API
-  const URL = '/appsalon_mvc/public/index.php/api/citas';
+  const URL = '/api/citas';
   const respuesta = await fetch(URL, {
     method: 'POST',
     body: datos
@@ -479,7 +479,7 @@ async function consultarBarberos() {
     datos.append('horaFin', horaFin);
     console.log( cita );
     
-    const URL = '/appsalon_mvc/public/index.php/api/barberos';
+    const URL = '/api/barberos';
     const respuesta = await fetch(URL, {
       method: 'POST',
       body: datos

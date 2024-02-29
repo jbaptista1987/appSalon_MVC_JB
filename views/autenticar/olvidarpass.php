@@ -1,7 +1,7 @@
 <h1 class="nombre-pagina">Olvidaste tu Clave?</h1>
 <p class="descripcion-pagina">Restablecela escribiendo tu E-Mail</p>
 
-<form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" class="formulario" method="post">
+<form  class="formulario" method="post">
     <div class="campo">
         <label for="correo">Correo:</label>
         <input type="email" name="Correo" id="correo" placeholder="Tu E-Mail" require>

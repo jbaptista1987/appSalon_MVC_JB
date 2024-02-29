@@ -16,8 +16,9 @@ class loginControllers {
         if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
             //Validacion del CAPTCHA de Google reCAPTCHA V2
             //$ip = $_SERVER['REMOTE_ADDR'];
+            
             $captcha = $_POST["g-recaptcha-response"];
-            $secretkey ='6LdWX2gpAAAAAGyFZqZkEgploynhwn3YwjHWieYE';
+            $secretkey = $_ENV['GOOGLE_RECAPTCHA_KEY'];
             $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=" . $_SERVER['REMOTE_ADDR']);
             $atributos = json_decode($respuestaCaptcha, true);
             
