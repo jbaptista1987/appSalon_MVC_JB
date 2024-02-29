@@ -13,7 +13,7 @@
     </div>
 
     <div class="campo">
-        <div class="g-recaptcha" data-sitekey="6LdWX2gpAAAAAPMo57eRyAn3-QmLPkl2YvywRN_F">
+        <div class="g-recaptcha" data-sitekey="<?php echo $_ENV['GOOGLE_RECAPTCHA_KEY'] ?>">
         </div>
     </div>
 
