@@ -6,8 +6,8 @@ class Admincitas extends AppSalon {
 
     //Base de Datos
     protected static $tabla = 'CitasServicios';
-    protected static $columnasDB = ['ID', 'Hora', 'HoraFin', 'Cliente', 'Correo', 'Telefono', 'Servicio', 'Precio'];
-    public $ID, $Hora, $HoraFin, $Cliente, $Correo, $Telefono, $Servicio, $Precio;
+    protected static $columnasDB = ['ID', 'Hora', 'HoraFin', 'Cliente', 'Correo', 'Telefono', 'Servicio', 'precio'];
+    public $ID, $Hora, $HoraFin, $Cliente, $Correo, $Telefono, $Servicio, $precio;
 
     public function __construct( $args = [] )
     {
@@ -18,6 +18,6 @@ class Admincitas extends AppSalon {
         $this->Correo=$valores['Correo'] ?? '';
         $this->Telefono=$valores['Telefono'] ?? '';
         $this->Servicio=$valores['Servicio'] ?? '';
-        $this->Precio=$valores['Precio'] ?? '';    
+        $this->precio=$valores['precio'] ?? '';    
     }
 }

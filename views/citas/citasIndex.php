@@ -16,7 +16,7 @@
     <div id="identUsuarioPanel">
         <p> <?php echo $nombre ?> </p>
     </div>
-    <a id="cerrarSesion" class="cerrar-sesion-btn" href="/appsalon_mvc/public/index.php/logout">Cerrar sesión</a>
+    <a id="cerrarSesion" class="cerrar-sesion-btn" href="/logout">Cerrar sesión</a>
 </div>
 
 <div id="app">

@@ -40,11 +40,12 @@
                 ?> 
             </li>
             <li>  
-                <p class="servicio"><span><?php echo $CitaServ->Servicio; ?></span> Precio: $<span><?php echo $CitaServ->Precio; ?></span></p>
+                <p class="servicio"><span><?php echo $CitaServ->Servicio; ?></span> Precio: $<span><?php echo $CitaServ->precio; ?></span></p>
                     
             </li>
                 <?php 
-                    $totalPagar += $CitaServ->Precio;
+                    
+                    $totalPagar += $CitaServ->precio;
                     $actual = $CitaServ->ID;
                     $proximo = $citasServicios[$key + 1]->ID ?? 0;
                     if(esUltimo($actual, $proximo)) {

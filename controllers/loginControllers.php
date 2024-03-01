@@ -15,17 +15,29 @@ class loginControllers {
 
         if ( $_SERVER['REQUEST_METHOD'] === 'POST' ) {
             //Validacion del CAPTCHA de Google reCAPTCHA V2
-            //$ip = $_SERVER['REMOTE_ADDR'];
-            
-            $captcha = $_POST["g-recaptcha-response"];
-            $secretkey = $_ENV['GOOGLE_RECAPTCHA_KEY_BACK'];
+            $secret = $_ENV['GOOGLE_RECAPTCHA_KEY_BACK'];
+            $response = $_POST['g-recaptcha-response'];
             $remoteip = $_SERVER['REMOTE_ADDR'];
-            $respuestaCaptcha = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$remoteip");
-            $atributos = json_decode($respuestaCaptcha, true);
+
+            $ch = curl_init();
+            curl_setopt($ch, CURLOPT_URL, 'https://www.google.com/recaptcha/api/siteverify');
+
+            // Set the POST request fields
+            $postfields = array(
+              'secret' => $secret,
+              'response' => $response,
+              'remoteip' => $remoteip
+            );
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, $postfields);
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            $response = curl_exec($ch);
+            curl_close($ch);
+            $responseKeys = json_decode($response, true);
+            
             //Llenar el Objeto de Login con los datos de Usuario, Clave y Captcha Validado
             $ObjLogin->sincronizar($_POST);
-            $ObjLogin->captchaGoogle = $atributos['success'];
-            
+            $ObjLogin->captchaGoogle = $responseKeys['success'];
             //Validar que los datos esten llenos
             $Validador = $ObjLogin->validarLogIn();
             

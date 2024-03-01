@@ -24,14 +24,14 @@ class AdminControllers {
         esAdmin();
         $fechaQuery = $_GET['fecha'] ??  date("Y-m-d");
 
-        $query = "SELECT citas.ID, citas.Hora, citas.HoraFin,";
-	    $query .= " Concat(clientes.nombre, ' ', clientes.apellido) AS Cliente, clientes.Correo, clientes.Telefono,";
-	    $query .= " Master_Servicios.nombre AS Servicio, Master_Servicios.Precio";
+        $query = "SELECT Citas.ID, Citas.Hora, Citas.HoraFin,";
+	    $query .= " Concat(Clientes.nombre, ' ', Clientes.apellido) AS Cliente, Clientes.Correo, Clientes.Telefono,";
+	    $query .= " Master_Servicios.nombre AS Servicio, Master_Servicios.precio";
         $query .= " FROM Citas";
-        $query .= " INNER JOIN clientes ON clientes.ID = citas.clienteID";
-        $query .= " INNER JOIN CitasServicios ON CitasServicios.citaID = citas.ID";
-        $query .= " INNER JOIN Master_Servicios ON Master_Servicios.ID = citasservicios.servicioID";
-        $query .= " WHERE citas.fecha='" . $fechaQuery . "'";
+        $query .= " INNER JOIN Clientes ON Clientes.ID = Citas.clienteID";
+        $query .= " INNER JOIN CitasServicios ON CitasServicios.citaID = Citas.ID";
+        $query .= " INNER JOIN Master_Servicios ON Master_Servicios.ID = CitasServicios.servicioID";
+        $query .= " WHERE Citas.fecha='" . $fechaQuery . "'";
         
         $citasServicios = Admincitas::traer($query);
 
